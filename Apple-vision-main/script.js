@@ -695,3 +695,34 @@ gsap.to("#page23>img", {
   },
   opacity: 1,
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const video = document.getElementById("video");
+  const logo = document.getElementById("infinity-img");
+  // const navbar = document.getElementById("navbar");
+  // const targetSection = document.getElementById("targetSection");
+
+  // Function to handle actions when video ends
+  function handleVideoEnd() {
+    // Check if video has ended
+    if (video.ended) {
+      // Fade out the video
+      video.style.opacity = 0;
+
+      console.log("hi");
+      // Show the logo with animation (assuming logo starts hidden)
+      logo.style.opacity = 1;
+      logo.style.height = "12rem"; // Set height directly without animation
+
+      // Show the navbar with animation (assuming navbar starts off-screen)
+      // navbar.style.top = "0";
+      // navbar.style.transition = "top 0.2s ease"; // Apply transition effect
+
+      // Scroll to the target section
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+
+  // Event listener for video end
+  video.addEventListener("ended", handleVideoEnd);
+});

@@ -854,3 +854,7 @@ body {
   transform: translateX(-50%);
   white-space: nowrap;
 }
+
+.hide {
+  opacity: 0;
+}

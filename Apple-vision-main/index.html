@@ -117,22 +117,21 @@
     </style>
   </head>
   <body>
-    <!-- <section id="app" class="helloworld">
+    <section id="logoVideo">
       <video
-        id="video"
-        class="video"
         src="./assest/logovideos.mp4"
         autoplay
         muted
       ></video>
-      <img
-        id="logo"
-        class="logo hidden"
-        src="../src/assets/image.png"
-        alt="Logo"
-      />
-    </section> -->
 
+      <script>
+        setTimeout(() => {
+          document.getElementById("logoVideo").classList.add("hidden");
+        }, 5000);
+      </script>
+    </section>
+
+  <main id="main-container" class="hidden">
     <section class="relative">
         <header class="bg-black fixed top-0 left-0 w-full z-[100]">
           <nav class="bg-transparent shadow-md py-4 fixed top-0 left-0 right-0 z-999 flex flex-row justify-between">
@@ -397,11 +396,11 @@
                   //     prevEl: '.swiper-button-prev',
                   // },
                   direction: "vertical",
-                  slidesPerView: 1,
-                  spaceBetween: 30,
+                  // slidesPerView: 1,
+                  // spaceBetween: 30,
                   mousewheel: true,
                   autoHeight: true,
-                  effect: "fade"
+                  // effect: "fade"
                   
               });
           })
@@ -467,5 +466,15 @@
         video.src = "../src/assets/logovideos.mp4";
       }
     </script>
+
+    <script>
+      const mainContaner = document.getElementById("main-container");
+
+      setTimeout(() => {
+        mainContaner.classList.remove("hidden");
+      }, 5000);
+    </script>
+
+    </main>
   </body>
 </html>

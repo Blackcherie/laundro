@@ -117,21 +117,22 @@
     </style>
   </head>
   <body>
-    <section id="logoVideo">
+    <!-- <section id="app" class="helloworld">
       <video
+        id="video"
+        class="video"
         src="./assest/logovideos.mp4"
         autoplay
         muted
       ></video>
+      <img
+        id="logo"
+        class="logo hidden"
+        src="../src/assets/image.png"
+        alt="Logo"
+      />
+    </section> -->
 
-      <script>
-        setTimeout(() => {
-          document.getElementById("logoVideo").classList.add("hidden");
-        }, 5000);
-      </script>
-    </section>
-
-  <main id="main-container" class="hidden">
     <section class="relative">
         <header class="bg-black fixed top-0 left-0 w-full z-[100]">
           <nav class="bg-transparent shadow-md py-4 fixed top-0 left-0 right-0 z-999 flex flex-row justify-between">
@@ -307,77 +308,26 @@
       referrerpolicy="no-referrer"
     ></script>
 
-    <!-- Swiper  -->
-    <section class="swiper-container">
-    <div class="swiper">
-      <!-- Additional required wrapper -->
+    <div class="swiper-container">
       <div class="swiper-wrapper">
-        <!-- Slides -->
-            <div class="swiper-slide">
-                <img
-                  src="./assest/image0.png"
-                >
-            </div>
-            <div  class="swiper-slide">
-                <img
-                  src="./assest/1.jpg"
-                 
-                >
-              </div>
-              <div  class="swiper-slide">
-                <img
-                  src="./assest/2a.jpg"
-                 
-                >
-              </div>
-              <div  class="swiper-slide">
-                <img
-                  src="./assest/3a.jpg"
-                 
-                >
-              </div>
-              <!-- <div id="pageNew5">
-                <h1>Welcome to the era of spatial computing</h1>
-                <img
-                  src="./assest/3b.jpg"
-                 
-                ></img>
-              </div> -->
-              <div  class="swiper-slide">
-                <img
-                  src="./assest/4a.jpg"
-                 
-                >
-              </div>
-              <div" class="swiper-slide">
-         
-                <img
-                  src="./assest/4b.jpg"
-                 
-                >
-              </div>
-              <div  class="swiper-slide">
-                <img
-                  src="./assest/4c.jpg"
-                 
-                >
-              </div>
-              <div  class="swiper-slide">
-                <img
-                  src="./assest/5. effort of student.jpg"
-                 
-                >
-              </div>
-              <div  class="swiper-slide">
-                  <img
-                  src="./assest/6.jpg"
-                  
-                  >
-              </div>
+        <div class="swiper-slide head"> <img src="https://plus.unsplash.com/premium_photo-1661963024541-1a485c66957d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        
+          <h2 class="heading"> hi </h1>
+        </div>
+        <div class="swiper-slide head"> <img src="https://images.unsplash.com/photo-1584419484761-db4ed922f29a?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        
+          <h2 class="heading"> hi </h1>
+        </div>
+        <div class="swiper-slide head"> <img src="https://plus.unsplash.com/premium_photo-1661963024541-1a485c66957d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        
+          <h2 class="heading"> hi </h1>
+        </div>
+        <div class="swiper-slide head"> <img src="https://plus.unsplash.com/premium_photo-1661963024541-1a485c66957d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+        
+          <h2 class="heading"> hi </h1>
+        </div>
+        
       </div>
-      <!-- If we need navigation buttons -->
-      <!-- <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div> -->
     </div>
 
     <!-- swiper script  -->
@@ -386,23 +336,15 @@
       import('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs')
           .then(module => {
               const Swiper = module.default;
-              const swiper = new Swiper('.swiper', {
-                
-                // direction: "vertical",
-                // loop: true,
-                
-                  // navigation: {
-                  //     nextEl: '.swiper-button-next',
-                  //     prevEl: '.swiper-button-prev',
-                  // },
-                  direction: "vertical",
-                  // slidesPerView: 1,
-                  // spaceBetween: 30,
-                  mousewheel: true,
-                  autoHeight: true,
-                  // effect: "fade"
-                  
-              });
+              var swiper = new Swiper('.swiper-container', {
+
+                direction: 'vertical',
+                mousewheelControl: true,
+                slidesPerView: 1,
+                effect : "fade"
+                // freeMode: true,
+                // freeModeSticky: true
+                });
           })
           .catch(error => {
               console.error('Failed to load Swiper:', error);
@@ -466,15 +408,5 @@
         video.src = "../src/assets/logovideos.mp4";
       }
     </script>
-
-    <script>
-      const mainContaner = document.getElementById("main-container");
-
-      setTimeout(() => {
-        mainContaner.classList.remove("hidden");
-      }, 5000);
-    </script>
-
-    </main>
   </body>
 </html>

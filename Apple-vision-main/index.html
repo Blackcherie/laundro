@@ -10,14 +10,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
-
-
-
     <script>
       tailwind.config = {
         theme: {
@@ -152,7 +144,7 @@
         </header>
       </section>
 
-   <!-- <div id="main">
+   <div id="main">
     <div id="page1">
         <h1>Welcome to the era of spatial computing</h1>
         <img
@@ -181,14 +173,14 @@
          
         ></img>
       </div>
-       <div id="pageNew5">
+      <!-- <div id="pageNew5">
         <h1>Welcome to the era of spatial computing</h1>
         <img
           src="./assest/3b.jpg"
          
         ></img>
       </div> -->
-      <!-- <div id="pageNew6">
+      <div id="pageNew6">
         <h1>Welcome to the era of spatial computing</h1>
         <img
           src="./assest/4a.jpg"
@@ -225,7 +217,7 @@
       </div>
 
       
-      <div id="pageNew11"> 
+      <!-- <div id="pageNew11"> 
             <img
             src="./assest/infinity/infinity.jpeg"
             
@@ -233,20 +225,23 @@
        </div> -->
 
 
-       <!-- <div id="page1">
-        <video src="./assest/infinity/infinity_video.mp4" autoplay  muted></video>
+       <div id="page1">
+        <video src="./assest/infinity/infinity_video.mp4" id="video"   muted></video>
+      </div>
+      <div id="infinity-img" class="hide">
+        <img src="./assest/infinity/infinity-2.jpeg" ></img>
       </div>
 
 
 
-      <div id="page6">
+      <!-- <div id="page6">
         <h3>Design</h3>
         <h1>Designed by Apple.</h1>
         <p>Apple Vision Pro is the result of decades of experience designing high‑performance, mobile, and wearable devices — culminating in the most ambitious product Apple has ever created. Vision Pro integrates incredibly advanced technology into an elegant, compact form, resulting in an amazing experience every time you put it on.
   
           Enclosure. A singular piece of three-dimensionally formed laminated glass flows into an aluminum alloy frame that curves to wrap around your face.
           Light Seal. The Light Seal</p>
-      </div>
+      </div> -->
       <div id="page7">
         <canvas></canvas>
       </div>
@@ -271,10 +266,7 @@
         <h1>
           <span>EyeSight.</span> An outward display reveals your eyes while wearing Vision Pro, letting others know when you are using apps or fully immersed.</h1>
       </div>
-      <div id="page14">
-        <div class="left14"></div>
-        <div class="right14"></div>
-      </div> -->
+      
       <!-- <div id="page15">
         <div id="center-page15">
           <video src="https://www.apple.com//105/media/us/apple-vision-pro/2023/7e268c13-eb22-493d-a860-f0637bacb569/anim/glass/large_2x.mp4" autoplay loop muted></video>
@@ -285,7 +277,7 @@
         <img src="https://www.apple.com/v/apple-vision-pro/a/images/overview/design/light_seal__fo87cv0zkcmm_large.jpg" alt="">
         <button>+ Learn more about design</button>
       </div> -->
-   <!-- </div>  -->
+   </div>
     <!-- <div id="pageNew10">
       <h1>Welcome to the era of spatial computing</h1>
       <img
@@ -293,6 +285,8 @@
        
       ></img> -->
     </div>
+
+   
 
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
     <script
@@ -357,56 +351,6 @@
 
 
     <script src="script.js"></script>
-
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      const app = document.getElementById("app");
-      const video = document.getElementById("video");
-      const logo = document.getElementById("logo");
-      const navbar = document.getElementById("navbar");
-      const page1 = document.getElementById("page1");
-      const horizontal = document.getElementById("horizontal");
-
-      let videoEnded = false;
-      let scrolled = false;
-
-      function handleScroll() {
-        const scrollY = window.scrollY || window.pageYOffset;
-        const previousScrollY = window.previousScrollY || 0;
-        const scrollSpeed = Math.abs(scrollY - previousScrollY);
-
-        if (scrollY > 0) {
-          scrolled = true;
-        } else {
-          scrolled = false;
-        }
-
-        if (scrollSpeed < 5 && scrollY > previousScrollY) {
-          logo.style.height = "3rem";
-        } else {
-          logo.style.height = "12rem";
-        }
-
-        window.previousScrollY = scrollY;
-      }
-
-      function handleVideoEnded() {
-        videoEnded = true;
-        video.style.opacity = 0;
-        logo.style.opacity = 1;
-        logo.style.height = "12rem";
-        navbar.classList.remove("hidden");
-        page1.classList.remove("hidden");
-        horizontal.classList.remove("hidden");
-      }
-
-      window.addEventListener("scroll", handleScroll);
-      video.addEventListener("ended", handleVideoEnded);
-
-      if (!videoEnded) {
-        video.src = "../src/assets/logovideos.mp4";
-      }
-    </script>
+   
   </body>
 </html>
